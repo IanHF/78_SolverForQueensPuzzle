@@ -1,13 +1,14 @@
 # represent a solver for the queens problem
 
-## [your name here]'s remarks
+## Ian Fried's remarks:
 
-### citations / worked with / received help from
-Replace this paragraph with a solid accounting of your sources.
-People have become either lackadaisical or dishonest
-about crediting others for ideas and help. 
-If I grade this work, I will rely on this section as
-a complete listing for judging academic honesty.
+Fun, time consuming project. One of the ones I enjoyed much more in the year. Much more conceptually challenging and less typing oriented than others we have done.
+
+### citations / worked with / received help from:
+Jesse Chen - MASSIVE source of help in helping me debug my code for recordSolutionsStarted().
+Kyle Edwards - source of advice in tackling the copy constructor.
+Moududur Rahman - helped teach some cs concepts to me which were helpful in general, he is a cs dojo senpai.
+Leia Park - friendly encouragement
 
 This list may omit sources common to everyone in the course,
 including...
