@@ -59,19 +59,37 @@ public class SolverForQueensPuzzle {
     private void recordSolutionsStarted() {
 
         // Which has been requested, a base case or recursive case?
-            // your code here
+            if(inProgress.accept()){
             // action(s) for base case(s)
-            System.out.println( "  for debugging: base case detected for..."
-                              + System.lineSeparator()
-                              + inProgress
-                              );
-
+            // System.out.println( "  for debugging: base case detected for..."
+            //                   + System.lineSeparator()
+            //                   + inProgress
+            //                   + System.lineSeparator()
+            //                   + "Solution found!"
+            //                   );
+                solutions.add(new BoardForQueensPuzzle(inProgress));
+            }
+            else if(inProgress.lastIsNg()){
+                // System.out.println( "  for debugging: base case detected for..."
+                //               + System.lineSeparator()
+                //               + inProgress
+                //               + System.lineSeparator()
+                //               + "It doesn't work."
+                //               );                
+            }
             // action for recursive cases
-            // your code here
-            System.out.println( "  for debugging: recursive case detected for..."
-                              + System.lineSeparator()
-                              + inProgress
-                              );
+            else {
+            // System.out.println( "  for debugging: recursive case detected for..."
+            //                   + System.lineSeparator()
+            //                   + inProgress
+            //                   );
+                for(int file = 0; file < inProgress.ranks(); file++){
+                    BoardForQueensPuzzle snap = new BoardForQueensPuzzle(inProgress);
+                    inProgress.populate(file);
+                    recordSolutionsStarted();
+                    inProgress = snap;
+                }
+            }
     }
 
 
